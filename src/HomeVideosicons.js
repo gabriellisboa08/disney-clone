@@ -97,6 +97,7 @@ const Item = styled.div`
     }
 
     &:hover {
+        cursor: pointer;
         transform: scale(1);
         img {
             border: solid 3px rgba(205, 204, 205, 1);
