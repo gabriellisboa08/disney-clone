@@ -24,7 +24,9 @@ const Home = () => {
 };
 
 const ContainerLists = styled.div`
-    padding: 0 calc(3.5vw + 24px);
+    ${'' /* padding: 0 calc(3.5vw + 24px); */}
+
+    width:100%
 `;
 
 const ContainerHome = styled.main`
@@ -32,6 +34,7 @@ const ContainerHome = styled.main`
     flex-direction: column;
     width: 100%;
     height: 100%;
+    padding: 0 calc(3.5vw + 24px);
 `;
 
 export default Home;

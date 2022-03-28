@@ -18,8 +18,6 @@ const imgSlider = () => {
                 autoPlay={true}
                 showThumbs={false}
                 showStatus={false}
-                centerMode={true}
-               
             >
                 {imagesSlides.map((item, index) => (
                     <CarouselItem key={index}>
@@ -32,8 +30,7 @@ const imgSlider = () => {
 };
 
 const ContainerCarousel = styled.div`
-    width: 100vw;
-    right: 0;
+
 `;
 
 const CarouselItem = styled.div`

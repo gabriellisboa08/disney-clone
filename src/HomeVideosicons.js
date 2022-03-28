@@ -31,7 +31,6 @@ const HomeVideosIcon = () => {
             video: '/videos/videos/1564676296-national-geographic.mp4',
         },
     ]);
-
     return (
         <Container>
             {VideosAndImages.map((item, index) => (
@@ -56,36 +55,42 @@ const HomeVideosIcon = () => {
 };
 
 const Container = styled.div`
+    width: 100%;
     position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
 `;
 
-const ItemContainer = styled.div``;
+const ItemContainer = styled.div`
+    width: 20%;
+`;
 
 const Item = styled.div`
+    background-image: linear-gradient(rgb(58, 60, 74), rgb(36, 38, 50));
     position: relative;
-    transform: scale(0.9);
+    transform: scale(0.93);
     background-size: contain;
     margin: auto;
     margin-top: 10px;
-    background: #090a0f;
-    transition: 0.2s;
-    border-radius: 10px;
-    border: solid 3px red;
+    background: ;
+    transition: 0.4s;
+    border-radius: 6px;
+    box-shadow: 0px 20px 19px 0px rgb(0 0 0);
+}
+;
     img {
-        height: 100%;
+        height: 99%;
         width: 100%;
         position: absolute;
         z-index: 1;
-        border-radius: 10px;
+        border-radius: 6px;
+        border: solid 3px RGBA(205, 204, 205, 0.5);
     }
     video {
         position: relative;
         bottom: 0;
-        border-radius: 10px;
-
+        border-radius: 6px;
         width: 100%;
         height: 100%;
         opacity: 0;
@@ -93,6 +98,9 @@ const Item = styled.div`
 
     &:hover {
         transform: scale(1);
+        img {
+            border: solid 3px rgba(205, 204, 205, 1);
+        }
         video {
             opacity: 1;
         }
