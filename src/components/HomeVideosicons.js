@@ -1,6 +1,6 @@
 import { toContainElement } from '@testing-library/jest-dom/dist/matchers';
 import { useState } from 'react';
-import styledComponents from 'styled-components';
+
 import styled from 'styled-components';
 
 const HomeVideosIcon = () => {
@@ -34,8 +34,8 @@ const HomeVideosIcon = () => {
     return (
         <Container>
             {VideosAndImages.map((item, index) => (
-                <ItemContainer>
-                    <Item key={index}>
+                <ItemContainer key={index}>
+                    <Item>
                         <div>
                             <img src={item.image}></img>
                         </div>
@@ -60,6 +60,7 @@ const Container = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
+    overflow-x: hidden;
 `;
 
 const ItemContainer = styled.div`
@@ -100,8 +101,9 @@ const Item = styled.div`
         cursor: pointer;
         transform: scale(1);
         img {
+            filter: grayscale(100%);
             border: solid 3px rgba(205, 204, 205, 1);
-        }
+        };
         video {
             opacity: 1;
         }

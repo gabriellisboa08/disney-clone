@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import HomeVideosIcon from '../HomeVideosicons';
+import HomeVideosIcon from './HomeVideosicons';
 import Slider from './Carousel/Index';
+import MarvelList from './Lists/Marvel.js';
 
 const Home = () => {
     return (
@@ -9,9 +10,8 @@ const Home = () => {
             <ContainerLists>
                 <HomeVideosIcon />
             </ContainerLists>
-            {/* Carousel 
-                items franchise
-                list
+            <MarvelList />
+            {/*
                 list
                 list
                 list
