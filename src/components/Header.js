@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import styled from 'styled-components';
 
 const Header = () => {
@@ -63,7 +63,7 @@ const Nav = styled.nav`
     justify-content: space-between;
     height: 72px;
     background: #090a0f;
-    background: ;
+
 `;
 
 const NavMenuItem = styled.a`
@@ -74,7 +74,7 @@ const NavMenuItem = styled.a`
     flex-direction: row;
     color: #f9f9f9;
     align-items: center;
-    fonte-weight: bold;
+    font-weight: bold;
     img {
         margin: auto;
         height: 20px;

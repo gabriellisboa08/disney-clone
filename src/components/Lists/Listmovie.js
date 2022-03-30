@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+
 
 const ListMovie = ({ title, items }) => {
     // const element = document.querySelector('')
@@ -35,12 +35,10 @@ const ContainerList = styled.div`
     color: white;
     width: calc(100vw - calc(3.5vw + 24px));
     overflow-x: hidden;
-   
-    `;
+`;
 
 const ContainerMoviesList = styled.div`
     display: flex;
-
 `;
 
 const ItemContainer = styled.div`
@@ -57,13 +55,12 @@ const Item = styled.div`
     background-size: contain;
     margin: auto;
     margin-top: 10px;
-    
     transition: 0.4s;
     border-radius: 6px;
     box-shadow: 0px 20px 19px 0px rgb(0 0 0);
     
 }
-;
+
     img {
         height: 99%;
         width: 100%;
@@ -79,7 +76,6 @@ const Item = styled.div`
             border: solid 3px rgba(205, 204, 205, 1);
         }
     }
-`;
+`
 
 export default ListMovie;
-
