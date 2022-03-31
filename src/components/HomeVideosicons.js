@@ -101,7 +101,6 @@ const Item = styled.div`
         cursor: pointer;
         transform: scale(1);
         img {
-            filter: grayscale(100%);
             border: solid 3px rgba(205, 204, 205, 1);
         };
         video {
