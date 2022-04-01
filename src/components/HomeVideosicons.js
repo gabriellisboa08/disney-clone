@@ -55,6 +55,7 @@ const HomeVideosIcon = () => {
 };
 
 const Container = styled.div`
+    min-height: 270px;
     width: 100%;
     position: relative;
     display: flex;
@@ -78,6 +79,7 @@ const Item = styled.div`
     transition: 0.4s;
     border-radius: 6px;
     box-shadow: 0px 20px 19px 0px rgb(0 0 0);
+    
 }
 ;
     img {

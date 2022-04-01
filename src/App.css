@@ -2,15 +2,17 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
 }
 body {
     height: 100%;
     width: 100%;
-    font-family: 'Avenir';
     background-color: #11131C;
+    font-family: 'Avenir';
+    font-weight: 100
 }
 
 @font-face {
     font-family: 'Avenir';
-    src: url('/src/Assets/avenir_ff/AvenirLTStd-Book.otf');
+    src: url('/src/Assets/avenir_ff/AvenirLTStd-Black.otf');
 }

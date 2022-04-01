@@ -2,23 +2,22 @@ import { useEffect, useState } from 'react';
 import BasicFetch from '../basicFetch';
 import ListMovie from './Listmovie';
 
-const MarvelList = () => {
+const Trending = () => {
     const [movies, setMovieLists] = useState([]);
-    
+
     useEffect(() => {
         const loadList = async () => {
-            let data = await BasicFetch('https://api.themoviedb.org/4/list/1?');
+            let data = await BasicFetch(
+                'https://api.themoviedb.org/3/trending/all/week?language=pt-BR'
+            );
+            
             setMovieLists(data);
             console.log(movies);
         };
         loadList();
-        console.log(movies);
+        
     }, []);
-   ;
-
-    return <ListMovie items={movies.results} title={movies.name}/>
-
- 
+    return <ListMovie items={movies.results} title='Top Week' />;
 };
 
-export default MarvelList;
+export default Trending;

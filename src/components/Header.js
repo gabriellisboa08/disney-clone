@@ -2,9 +2,21 @@ import { useEffect, useState, useContext } from 'react';
 import styled from 'styled-components';
 
 const Header = () => {
-    const [scrollHeader, setscrollHeader] = useState(false);
+    const [visibleHeader, setVisibleHeader] = useState(false);
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        const scrollListner = () => {
+            if (window.scrollY > 10) {
+                setVisibleHeader(true);
+            } else {
+                setVisibleHeader(false);
+            }
+        };
+        window.addEventListener('scroll', scrollListner);
+        // return () => {
+        //     window.removeEventListener('scroll', scrollListner);
+        // };
+    }, []);
 
     const iconsData = [
         {
@@ -34,8 +46,14 @@ const Header = () => {
     ];
 
     return (
-        <Nav>
-            <NavMenu>
+        <Nav
+            style={
+                visibleHeader == true
+                    ? { background: '#090a0f' }
+                    : { background: 'transparent' }
+            }
+        >
+            <NavMenu className="container-fluid">
                 <Logo src="/images/images/logo.svg" />
                 {iconsData.map((item, index) => (
                     <NavMenuItem key={index} href="#">
@@ -45,25 +63,26 @@ const Header = () => {
                 ))}
             </NavMenu>
             <UserHeader>
-                <img src="#"></img>
+                <img src=""></img>
                 <span>Convidado</span>
             </UserHeader>
         </Nav>
     );
 };
-const Logo = styled.img`
-    width: 80px;
-    height: 100%;
-    margin-right: 32px;
-`;
-
 const Nav = styled.nav`
     padding: 0px 36px;
     display: flex;
     justify-content: space-between;
     height: 72px;
-    background: #090a0f;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+`;
 
+const Logo = styled.img`
+    width: 80px;
+    height: 100%;
+    margin-right: 32px;
 `;
 
 const NavMenuItem = styled.a`

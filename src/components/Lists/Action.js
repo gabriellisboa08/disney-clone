@@ -2,23 +2,21 @@ import { useEffect, useState } from 'react';
 import BasicFetch from '../basicFetch';
 import ListMovie from './Listmovie';
 
-const MarvelList = () => {
+const Action = () => {
     const [movies, setMovieLists] = useState([]);
-    
+
     useEffect(() => {
         const loadList = async () => {
-            let data = await BasicFetch('https://api.themoviedb.org/4/list/1?');
+            let data = await BasicFetch(
+                'https://api.themoviedb.org/3/discover/movie?with_genres=28&language=pt-BR&api_key=cc6f0df09b8b698a846b90793131765a'
+            );
             setMovieLists(data);
             console.log(movies);
         };
         loadList();
         console.log(movies);
     }, []);
-   ;
-
-    return <ListMovie items={movies.results} title={movies.name}/>
-
- 
+    return <ListMovie items={movies.results} title="Action" />;
 };
 
-export default MarvelList;
+export default Action;
