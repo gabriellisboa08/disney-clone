@@ -18,6 +18,7 @@ const imgSlider = () => {
                 autoPlay={true}
                 showThumbs={false}
                 showStatus={false}
+                centerMode
             >
                 {imagesSlides.map((item, index) => (
                     <CarouselItem key={index}>
@@ -30,14 +31,28 @@ const imgSlider = () => {
 };
 
 const ContainerCarousel = styled.div`
-
+    width: 100%;
+    padding-bottom: 30px ;
+    
 `;
 
 const CarouselItem = styled.div`
-    max-height: 400px;
-    height: 100%;
+    max-height: 500px;
+    height: 30vw;
+
     background-size: contain;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+        rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    border-radius: 10px;
+    border: solid 3px transparent;
+    transition: 0.4s;
+    :hover {
+        
+        cursor: pointer;
+        border: solid 3px white;
+    }
     img {
+        border-radius: 10px;
         height: 100%;
     }
 `;

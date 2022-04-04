@@ -69,6 +69,7 @@ const ListMovie = ({ title, items }) => {
 };
 
 const ContainerList = styled.div`
+    padding-top: 15px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -90,13 +91,16 @@ const ContainerMoviesList = styled.div`
 `;
 
 const ContainerArrow = styled.div`
+
     overflow-x: hidden;
     display: flex;
     justify-content: center;
+    
+    top: 13px;
     align-items: center;
     align-content: center;
     position: absolute;
-    height: 95%;
+    height: 100%;
     margin-left: calc(-3.5vw - 24px);
     left: 20px;
     z-index: 2;
@@ -108,6 +112,7 @@ const ContainerArrow = styled.div`
     }
 `;
 const ContainerArrowRight = styled.div`
+    top: 13px;
     width: calc(3.5vw + 24px);
     overflow: hidden;
     display: flex;
@@ -115,7 +120,7 @@ const ContainerArrowRight = styled.div`
     align-items: center;
     align-content: center;
     position: absolute;
-    height: 85%;
+    height: 100%;
     overflow-y: hidden;
     right: 20px;
     opacity: 0;
@@ -151,6 +156,7 @@ const Item = styled.div`
         border-radius: 10px;
         border: solid 3px transparent;
     }
+
     :hover {
         transform: scale(1);
     }

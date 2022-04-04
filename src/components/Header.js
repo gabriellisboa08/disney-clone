@@ -13,9 +13,9 @@ const Header = () => {
             }
         };
         window.addEventListener('scroll', scrollListner);
-        // return () => {
-        //     window.removeEventListener('scroll', scrollListner);
-        // };
+        return () => {
+            window.removeEventListener('scroll', scrollListner);
+        };
     }, []);
 
     const iconsData = [
@@ -77,15 +77,23 @@ const Nav = styled.nav`
     position: fixed;
     z-index: 3;
     width: 100%;
+    transition: all 0.4s;
+    @media (max-width: 1000px) {
+        padding: 0px 0px;
+    }
 `;
 
 const Logo = styled.img`
     width: 80px;
     height: 100%;
     margin-right: 32px;
+    @media (max-width: 1000px) {
+        width: 50px;
+    }
 `;
 
 const NavMenuItem = styled.a`
+    
     text-decoration: none;
     padding: 16px;
     width: auto;
@@ -114,11 +122,19 @@ const NavMenuItem = styled.a`
             width: 0%;
             transition: 0.3s;
         }
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
     &:hover {
         span:after {
             opacity: 1;
             width: 100%;
+        }
+    }
+    @media (max-width: 1000px) {
+        span {
+            font-size: 10px;
         }
     }
 `;

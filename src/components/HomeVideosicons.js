@@ -55,13 +55,12 @@ const HomeVideosIcon = () => {
 };
 
 const Container = styled.div`
-    min-height: 270px;
+    /* min-height: 270px; */
     width: 100%;
     position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
-    overflow-x: hidden;
 `;
 
 const ItemContainer = styled.div`
@@ -75,7 +74,6 @@ const Item = styled.div`
     background-size: contain;
     margin: auto;
     margin-top: 10px;
-    background: ;
     transition: 0.4s;
     border-radius: 6px;
     box-shadow: 0px 20px 19px 0px rgb(0 0 0);
@@ -83,7 +81,7 @@ const Item = styled.div`
 }
 ;
     img {
-        height: 99%;
+        height: 98%;
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -91,8 +89,7 @@ const Item = styled.div`
         border: solid 3px RGBA(205, 204, 205, 0.5);
     }
     video {
-        position: relative;
-        bottom: 0;
+        
         border-radius: 6px;
         width: 100%;
         height: 100%;

@@ -13,17 +13,21 @@ const Home = () => {
             <Slider />
             <ContainerLists>
                 <HomeVideosIcon />
+                <MarvelList />
+                <Trending />
+                <Romance />
+                <Horror />
+                <Action />
             </ContainerLists>
-            <MarvelList />
-            <Trending />
-            <Romance />
-            <Horror />
-            <Action />
         </ContainerHome>
     );
 };
 
 const ContainerLists = styled.div`
+    
+    display: flex;
+    flex-direction: column;
+    padding: 0 calc(3.5vw + 24px);
     width: 100%;
 `;
 
@@ -33,7 +37,6 @@ const ContainerHome = styled.main`
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 0 calc(3.5vw + 24px);
 `;
 
 export default Home;
