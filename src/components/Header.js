@@ -53,11 +53,13 @@ const Header = () => {
                     : { background: 'transparent' }
             }
         >
-            <NavMenu className="container-fluid">
+            <NavMenu >
                 <Logo src="/images/images/logo.svg" />
                 {iconsData.map((item, index) => (
                     <NavMenuItem key={index} href="#">
-                        <img src={item.icon}></img>
+                        <div>
+                            <img src={item.icon}></img>
+                        </div>
                         <span>{item.name}</span>
                     </NavMenuItem>
                 ))}
@@ -86,14 +88,16 @@ const Nav = styled.nav`
 const Logo = styled.img`
     width: 80px;
     height: 100%;
-    margin-right: 32px;
+    margin-right: 25px;
+    margin-left: 20px;
     @media (max-width: 1000px) {
         width: 50px;
     }
 `;
 
-const NavMenuItem = styled.a`
-    
+const NavMenuItem = styled.div`
+    position: relative;
+    cursor: pointer;
     text-decoration: none;
     padding: 16px;
     width: auto;
@@ -122,9 +126,6 @@ const NavMenuItem = styled.a`
             width: 0%;
             transition: 0.3s;
         }
-        @media (max-width: 1000px) {
-            display: none;
-        }
     }
     &:hover {
         span:after {
@@ -133,9 +134,62 @@ const NavMenuItem = styled.a`
         }
     }
     @media (max-width: 1000px) {
-        span {
-            font-size: 10px;
+        div {
+            position: relative;
+            &:after {
+                content: '';
+                height: 2px;
+                background: white;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -5px;
+                opacity: 0;
+                width: 0%;
+                transition: 0.3s;
+            }
+            &:hover {
+                &:after {
+                    opacity: 1;
+                    width: 70%;
+                }
+            }
         }
+        span {
+            display: none;
+        }
+        div {
+            div:after {
+                content: '';
+                height: 2px;
+                background: white;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -5px;
+                opacity: 0;
+                width: 100%;
+                transition: 0.3s;
+            }
+            &:hover {
+                div:after {
+                    opacity: 1;
+                    width: 100%;
+                }
+            }
+        }
+        img {
+            &:hover {
+                div:after {
+                    opacity: 1;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 0;
     }
 `;
 
@@ -143,16 +197,13 @@ const NavMenu = styled.div`
     display: flex;
 `;
 
-const UserHeader = styled.a`
+const UserHeader = styled(NavMenuItem)`
     height: 100%;
     color: white;
-    display: flex;
     align-items: center;
-    img {
-        margin: 5px;
-    }
     span {
-        margin: 6px;
+        display: flex;
+        margin-right: 6px;
         font-size: 13px;
     }
 `;

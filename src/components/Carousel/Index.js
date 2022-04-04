@@ -37,7 +37,7 @@ const ContainerCarousel = styled.div`
 `;
 
 const CarouselItem = styled.div`
-    max-height: 500px;
+    max-height: 450px;
     height: 30vw;
 
     background-size: contain;
