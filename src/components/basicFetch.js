@@ -1,6 +1,7 @@
-const API_KEY = 'api_key=cc6f0df09b8b698a846b90793131765a';
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 const BasicFetch = async (endpoint) => {
-    const req = await fetch(`${endpoint}&${API_KEY}`);
+    const req = await fetch(`${endpoint}&api_key=${API_KEY}`);
     const data = await req.json();
     return data;
 };
