@@ -91,11 +91,10 @@ const ContainerMoviesList = styled.div`
 `;
 
 const ContainerArrow = styled.div`
-
     overflow-x: hidden;
     display: flex;
     justify-content: center;
-    
+
     top: 13px;
     align-items: center;
     align-content: center;
@@ -109,6 +108,10 @@ const ContainerArrow = styled.div`
     :hover {
         cursor: pointer;
         opacity: 1;
+    }
+    @media (max-width: 600px) {
+        opacity: 1;
+        width: 70px;
     }
 `;
 const ContainerArrowRight = styled.div`
@@ -128,6 +131,11 @@ const ContainerArrowRight = styled.div`
     transition: 0.2s;
     :hover {
         cursor: pointer;
+        opacity: 1;
+        
+    }
+    @media (max-width: 600px) {
+        width: 40px;
         opacity: 1;
     }
 `;

@@ -20,9 +20,7 @@ const Footer = () => {
                             </p>
                         </li>
                         <li>
-                            <p>
-                                Direitos de Imagem para Walt Disney
-                            </p>
+                            <p>Direitos de Imagem para Walt Disney</p>
                         </li>
                     </ul>
                 </FooterItemCredits>
@@ -82,15 +80,20 @@ const FooterContainerItems = styled.footer`
     flex-direction: column;
     color: #f9f9f9;
     background: #090a0f;
-    @media (max-width:630px){
+    @media (max-width: 630px) {
+        
         font-size: 13px;
+    }
+    @media (max-width: 400px) {
+        font-size: 10px;
     }
 `;
 const FooterItemContent = styled.div`
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 10px 40px;
     div {
         /* DIV que SEPARA OS ITEMS DO CONTEÙDO DO FOOTER */
         width: 33%;
@@ -102,8 +105,9 @@ const FooterItemContent = styled.div`
 const FooterItemCredits = styled.div`
     ul {
         padding-top: 10px;
-        padding-left: 10px;
+        padding-left: 20px;
     }
+   
 `;
 
 const FooterItemDevInfo = styled.div`
